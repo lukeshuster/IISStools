@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './app';
+import {BrowserRouter} from 'react-router-dom';
+import {ThemeProvider, SoundsProvider, createSounds, createTheme} from 'arwes';
+
+const sounds = {
+    shared: { volume: 1, },  // Shared sound settings
+    players: {  // The player settings
+      click: {  // With the name the player is created
+        sound: { src: ['/assets/sounds/click.mp3'] }  // The settings to pass to Howler
+      },
+      typing: {
+        sound: { src: ['/assets/sounds/typing.mp3'] },
+        settings: { oneAtATime: true }  // The custom app settings
+      },
+      deploy: {
+        sound: { src: ['/assets/sounds/deploy.mp3'] },
+        settings: { oneAtATime: true }
+      },
+    }
+  };
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+        <BrowserRouter>
+            <ThemeProvider theme={createTheme()}>
+                <SoundsProvider sounds={createSounds(sounds)}>
+                    <App />
+                </SoundsProvider>
+            </ThemeProvider>
+        </BrowserRouter>,
   document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)
