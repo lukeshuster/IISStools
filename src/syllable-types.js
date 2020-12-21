@@ -1,4 +1,4 @@
-export const InitialConsonant = {
+export const InitialConsonants = {
     F: '/assets/language/initial_consonants/F.mp3',
     FT: '/assets/language/initial_consonants/FT.mp3',
     H: '/assets/language/initial_consonants/H.mp3',
@@ -22,7 +22,7 @@ export const InitialConsonant = {
     W: '/assets/language/initial_consonants/W.mp3'
 }
 
-export const Vowel = {
+export const Vowels = {
     A: '/assets/language/vowels/A.mp3',
     AI: '/assets/language/vowels/AI.mp3',
     AO: '/assets/language/vowels/AO.mp3',
@@ -42,7 +42,7 @@ export const Vowel = {
     YU: '/assets/language/vowels/YU.mp3'
 }
 
-export const FinalConsonant = {
+export const FinalConsonants = {
     H: '/assets/language/final_consonants/H.mp3',
     KH: '/assets/language/final_consonants/KH.mp3',
     K: '/assets/language/final_consonants/K.mp3',

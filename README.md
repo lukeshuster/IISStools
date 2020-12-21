@@ -1,4 +1,5 @@
 # Traveller Tools
+A set of digital tools for the tabletop roleplaying game Traveller (Mongoose 2e).
 
 ## Project setup
 

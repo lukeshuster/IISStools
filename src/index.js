@@ -18,6 +18,10 @@ const sounds = {
         sound: { src: ['/assets/sounds/deploy.mp3'] },
         settings: { oneAtATime: true }
       },
+      test: {
+        sound: { src: ['/assets/language/final_consonants/H.mp3'] },
+        settings: { oneAtATime: true }
+      }
     }
   };
 
